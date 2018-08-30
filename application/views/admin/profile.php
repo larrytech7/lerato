@@ -2,17 +2,15 @@
 				<div class="donation-page opacity">
 				<div class="container container-sm">
 									<div class="row ">
-										<div class="col-md-3"></div>
-										<div class="col-md-6">
+										<div class="col-md-7">
 											<div class="card">
-												<div class="card-title px-4">
-													<h3 class="heading heading-5 strong-500 bg-primary">
-														My Profile
-													</h3>
-												</div>
 												<div class="card-body">
+												
 													<?= form_open('admin/login', array('class'=>'col-lg-12 form-default', 'role'=>'form')); ?>
 														<div class="row">
+														<h3 class="heading heading-5 strong-500">
+														My Profile
+													</h3><hr style="border: 1px solid #000000"/>
 															<div class="col-12">
 																<div class="form-group">
 																	<label><i class="fas fa-user"></i> <?= $user->first_name.' '.$user->last_name ?></label>
@@ -80,13 +78,8 @@
 												</div>
 											</div>
 										</div>
-										<div class="col-md-3">
+										<div class="col-md-5">
 											<div class="card">
-												<div class="card-title px-4">
-													<h4 class="heading heading-5 strong-500 bg-primary">
-														<i class="fas fa-building"></i> Bank Account
-													</h4>
-												</div>
 												<div class="card-body">
 													<?= form_open('admin/login', array('class'=>'col-lg-12 form-default', 'role'=>'form')); ?>
 														<div class="row">
@@ -97,18 +90,20 @@
 															</div>
 														</div>
 														<hr style="border: 1px solid #000000"/>
-														<p style="font-type:bold">Account Holder: <?= $bank->bankaccountname ?></p>
-														<p>Owner ID: <?= $bank->bankpersonid ?></p>
-														<p>Owner Address: <?= $bank->bankpersonaddress ?></p>
-														<p>Phone: <?= $bank->bankcontact ?></p>
-														<p>Email: <?= $bank->bankemail ?></p>
-														<p>Bank Address: <?= $bank->bankaddress ?></p>
-														<p>Bank Branch Code<?= $bank->bankbranchcode ?></p>
-														<p>Bank Country: <?= $bank->bankcountry ?></p>
-														<p>E-Code: <?= $bank->ebranchcode ?></p>
-														<p>Account opened on: <?= $bank->opened ?></p>
-														<p>SWIFT: <?= $bank->bankswift ?></p>
-
+														<table class="table condensed" >
+														
+														<tr><td>Account Holder</td> <td><?= $bank->bankaccountname ?></td></tr>
+														<tr><td>Owner ID </td><td> <?= $bank->bankpersonid ?></td></tr>
+														<tr><td>Owner Address</td><td> <?= $bank->bankpersonaddress ?></td></tr>
+														<tr><td>Phone</td><td> <?= $bank->bankcontact ?></td></tr>
+														<tr><td>Email </td><td><?= $bank->bankemail ?></td></tr>
+														<tr><td>Bank Address </td> <td><?= $bank->bankaddress ?></td></tr>
+														<tr><td>Bank Branch Code</td><td><?= $bank->bankbranchcode ?></td></tr>
+														<tr><td>Bank Country</td> <td><?= $bank->bankcountry ?></td></tr>
+														<tr><td>E-Code </td><td><?= $bank->ebranchcode ?></td></tr>
+														<tr><td>Account opened on</td> <td><?= $bank->opened ?></td></tr>
+														<tr><td>SWIFT </td><td> <?= $bank->bankswift ?></td></tr>
+														</table>
 													</form>
 												</div>
 											</div>

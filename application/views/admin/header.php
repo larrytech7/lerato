@@ -77,7 +77,7 @@
 								      </li>
 								      <li><a href="#exchange" class="scroll-down tran3s hvr-shutter-out-horizontal">Exchange</a></li>
 									  <li><a href="<?= site_url('send') ?>">Send Lerato</a></li>
-								      <li><a href="<?= site_url('receive') ?>">Receive Lerato</a></li>
+								      <li><a href="<?= site_url('receive') ?>">Buy Lerato</a></li>
 								      <?php if($this->session->userdata('loggedin')): ?>
 										<li><a href="#!">My Account</a>
 											<ul class="dropdown">

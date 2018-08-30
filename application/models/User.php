@@ -79,11 +79,25 @@ class User extends CI_Model{
     
     //update user
     public function updateUser($user, $id){
-        $user['updated_at'] = time();
-        $user['date_string'] = date('l jS \of F Y h:i:s A');
+        $user->updated_at = time();
+        $user->date_string = date('l jS \of F Y h:i:s A');
         return $this->db
                 ->set($user)
                 ->where('id', $id)
                 ->update($this->table);
+    }
+	
+	//update users with transaction
+    public function updateWithTransaction($user1, $user2){
+        $user1->updated_at = time();
+        $user2->updated_at = time();
+        $user1->date_string = date('l jS \of F Y h:i:s A');
+        $user2->date_string = date('l jS \of F Y h:i:s A');
+		$this->db->trans_start();
+		$this->db->replace($this->table, $user1);
+		$this->db->replace($this->table, $user2);
+		$this->db->trans_complete();
+		
+		return $this->db->trans_status();
     }
 }

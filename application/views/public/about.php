@@ -1,310 +1,223 @@
-<!-- MAIN WRAPPER -->
-<div class="body-wrap">
-    <div id="st-container" class="st-container">
-		<div class="st-pusher">
-            <div class="st-content">
-            <div class="st-content-inner">
+<div class="theme-inner-banner">
+				<div class="opacity">
+					<div class="container">
+						<h2>About us</h2>
+						<ul>
+							<li><a href="index-2.html" class="tran3s">Home</a></li>
+							<li>/</li>
+							<li>About us</li>
+						</ul>
+					</div> <!-- /.container -->
+				</div> <!-- /.opacity -->
+			</div> <!-- /.theme-inner-banner -->
 
-                <!-- PAGE TITLE -->
-                <section class="slice-xl slice--offset-top has-bg-cover bg-size-cover" style="background-image: url('<?= base_url('resources/'); ?>assets/images/backgrounds/slider/img-41.jpg'); background-position: bottom bottom;">
-                    <span class="mask bg-base-1 alpha-7"></span>
-                    <div class="text-center">
-                        <div class="container">
-                            <div class="py-5">
-                                <div class="fluid-paragraph text-center">
-                                    <h3 class="heading heading-xl strong-400 text-normal c-white">
-                                        We are EdgeMotion!
-                                    </h3>
-                                    <p class="lead line-height-1_8 strong-400 c-white mt-3">
-                                        Our mission is empower African digital designers, creators and animators to create a recognized standard for their art across the globe.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
-               <section class="slice sct-color-1">
-                        <div class="container-fluid">
-                            <div class="section-title section-title--style-1 text-center mb-2">
-                                <h3 class="section-title-inner">
-                                    <span>Meet the minds</span>
-                                </h3>
-                                <span class="section-title-delimiter clearfix d-none"></span>
-                            </div>
 
-                            <span class="clearfix"></span>
 
-                            <div class="fluid-paragraph fluid-paragraph-sm c-gray-light strong-300 text-center">
-                                They materialize your imaginations through design and animation like you've never seen before.
-                            </div>
+			<!-- 
+			=============================================
+				About Charity
+			============================================== 
+			-->
+			<div class="about-finance about-top-text-one">
+				<div class="container">
+					<div class="text float-right wow fadeInRight">
+						<h3>Working <span class="ch-p-color">Since 2018</span> content </h3>
+						<p style="font-size:18px;">content</p> <br>
+						<p>content.</p>
+						<div class="clearfix author">
+							<img src="<?= base_url('resources/assets/') ?>images/home/3.jpg" alt="Image" class="float-left round-border">
+							<div class="name float-left">
+								<h6>Mr/Mrs ....</h6>
+								<p>CEO &amp; Founder of ....</p>
+							</div> <!-- /.name -->
+							<img src="<?= base_url('resources/assets/') ?>images/home/sign.jpg" alt="" class="float-right">
+						</div> <!-- /.clearfix -->
+					</div> <!-- /.text -->
+					<div class="float-left img-box wow fadeInLeft">
+						<div class="row">
+							<div class="single-img float-left"><img src="<?= base_url('resources/assets/') ?>images/inner-page/5.jpg" alt="image"></div>
+							<div class="single-img small float-left"><img src="<?= base_url('resources/assets/') ?>images/inner-page/6.jpg" alt="image"></div>
+							<div class="single-img small float-left"><img src="<?= base_url('resources/assets/') ?>images/inner-page/7.jpg" alt="image"></div>
+						</div>
+					</div> <!-- /.img-box -->
+				</div> <!-- /.container -->
+			</div> <!-- /.about-finance -->
 
-                            <span class="space-xs-xl"></span>
+			<!-- 
+			=============================================
+				Charity Counter
+			============================================== 
+			-->
+			<div class="charity-counter">
+				<div class="container">
+					<div class="row">
+		       			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+		       				<div class="single-box text-center">
+		       					<p>Donations</p>
+		       					<h2 class="number"><span class="timer" data-from="0" data-to="1000" data-speed="1000" data-refresh-interval="5">0</span></h2>
+		       				</div> <!-- /.single-box -->
+		       			</div>
+		       			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+		       				<div class="single-box text-center">
+		       					<p>Investment</p>
+		       					<h2 class="number"><span class="timer" data-from="0" data-to="10" data-speed="1000" data-refresh-interval="5">0</span></h2>
+		       				</div> <!-- /.single-box -->
+		       			</div>
+		       			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+		       				<div class="single-box text-center">
+		       					<p>Transactions</p>
+		       					<h2 class="number"><span class="timer" data-from="0" data-to="800" data-speed="1000" data-refresh-interval="5">0</span>+</h2>
+		       				</div> <!-- /.single-box -->
+		       			</div>
+		       			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+		       				<div class="single-box text-center border-fix">
+		       					<p>Users</p>
+		       					<h2 class="number"><span class="timer" data-from="0" data-to="1500" data-speed="1000" data-refresh-interval="5">0</span>+</h2>
+		       				</div> <!-- /.single-box -->
+		       			</div>
+		       		</div> <!-- /.row -->
+				</div> <!-- /.container -->
+			</div> <!-- /.charity-counter -->
 
-                            <div class="swiper-js-container">
-                                <div class="swiper-container" data-swiper-items="4" data-swiper-space-between="20" data-swiper-md-items="3" data-swiper-md-space-between="20" data-swiper-sm-items="2" data-swiper-sm-space-between="20" data-swiper-xs-items="1" data-swiper-xs-space-between="0">
-                                    <div class="swiper-wrapper pb-5">
-                                        <div class="swiper-slide">
-                                            <div class="block block--style-5 no-radius">
-                                                <div class="block-image">
-                                                    <img src="<?= base_url('resources/');?>assets/images/clients/client-2.png">
-                                                </div>
-                                                <div class="block-mask-caption--over d-flex align-items-center">
-                                                    <div class="col text-center">
-                                                        <h4 class="heading heading-xs strong-400 text-uppercase c-gray-lighter">
-                                                            Graphic designer
-                                                        </h4>
-                                                        <h3 class="heading heading-4 strong-500 c-gray-lighter">
-                                                            David Wally                                                        </h3>
-                                                        <ul class="social-media social-media--style-1-v1 social-media-circle mt-4">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-facebook"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-twitter"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-instagram"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-whatsapp"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="swiper-slide">
-                                            <div class="block block--style-5">
-                                                <div class="block-image">
-                                                    <img src="<?= base_url('resources/');?>assets/images/clients/client-2.png">
-                                                </div>
-                                                <div class="block-mask-caption--over d-flex align-items-center">
-                                                    <div class="col text-center">
-                                                        <h4 class="heading heading-xs strong-400 text-uppercase c-gray-lighter">
-                                                            Marketing specialist
-                                                        </h4>
-                                                        <h3 class="heading heading-4 strong-500 c-gray-lighter">
-                                                            Darby Jewell                                                        </h3>
-                                                        <ul class="social-media social-media--style-1-v1 social-media-circle mt-4">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-facebook"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-twitter"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-instagram"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-whatsapp"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="swiper-slide">
-                                            <div class="block block--style-5">
-                                                <div class="block-image">
-                                                    <img src="<?= base_url('resources/');?>assets/images/clients/client-2.png">
-                                                </div>
-                                                <div class="block-mask-caption--over d-flex align-items-center">
-                                                    <div class="col text-center">
-                                                        <h4 class="heading heading-xs strong-400 text-uppercase c-gray-lighter">
-                                                            Creative director
-                                                        </h4>
-                                                        <h3 class="heading heading-4 strong-500 c-gray-lighter">
-                                                            Bettie Mavis                                                        </h3>
-                                                        <ul class="social-media social-media--style-1-v1 social-media-circle mt-4">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-facebook"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-twitter"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-instagram"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-whatsapp"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+			<!-- 
+			=============================================
+				Our Team
+			============================================== 
+			-->
+			<div class="our-team theme-team-style-one">
+				<div class="container">
+					<div class="charity-title text-center">
+						<h2>Our Amazing Team</h2>
+						<p>No matter how many times your amazing, absolutely brilliant </p>
+					</div> <!-- /.charity-title -->
 
-                                        <div class="swiper-slide">
-                                            <div class="block block--style-5">
-                                                <div class="block-image">
-                                                    <img src="<?= base_url('resources/');?>assets/images/clients/client-2.png">
-                                                </div>
-                                                <div class="block-mask-caption--over d-flex align-items-center">
-                                                    <div class="col text-center">
-                                                        <h4 class="heading heading-xs strong-400 text-uppercase c-gray-lighter">
-                                                            Sells manager
-                                                        </h4>
-                                                        <h3 class="heading heading-4 strong-500 c-gray-lighter">
-                                                            Elisabeth Alanna                                                        </h3>
-                                                        <ul class="social-media social-media--style-1-v1 social-media-circle mt-4">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-facebook"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-twitter"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-instagram"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-whatsapp"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+					<div class="row">
+						<div class="col-md-3 col-xs-6 wow fadeInUp">
+							<div class="single-team-member text-center">
+								<div class="img"><img src="<?= base_url('resources/assets/') ?>images/team/12.jpg" alt="Image"></div>
+								<div class="title">
+									<h6><a href="#" class="tran3s">Antonio Creighton</a></h6>
+									<span>Senior Volunteer</span>
+									<ul>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									</ul>
+								</div> <!-- /.title -->
+							</div> <!-- /.single-team-member -->
+						</div> <!-- /.col- -->
+						<div class="col-md-3 col-xs-6 wow fadeInUp" data-wow-delay="0.1s">
+							<div class="single-team-member text-center">
+								<div class="img"><img src="<?= base_url('resources/assets/') ?>images/team/13.jpg" alt="Image"></div>
+								<div class="title">
+									<h6><a href="#" class="tran3s">Jannatul Ferdous</a></h6>
+									<span>Event Manager</span>
+									<ul>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									</ul>
+								</div> <!-- /.title -->
+							</div> <!-- /.single-team-member -->
+						</div> <!-- /.col- -->
+						<div class="col-md-3 col-xs-6 wow fadeInUp" data-wow-delay="0.2s">
+							<div class="single-team-member text-center">
+								<div class="img"><img src="<?= base_url('resources/assets/') ?>images/team/14.jpg" alt="Image"></div>
+								<div class="title">
+									<h6><a href="#" class="tran3s">Rashed kabir Abs</a></h6>
+									<span>Head of Volunteer</span>
+									<ul>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									</ul>
+								</div> <!-- /.title -->
+							</div> <!-- /.single-team-member -->
+						</div> <!-- /.col- -->
+						<div class="col-md-3 col-xs-6 wow fadeInUp" data-wow-delay="0.3s">
+							<div class="single-team-member text-center">
+								<div class="img"><img src="<?= base_url('resources/assets/') ?>images/team/15.jpg" alt="Image"></div>
+								<div class="title">
+									<h6><a href="#" class="tran3s">Zubayer Hasan</a></h6>
+									<span>CEO at Google</span>
+									<ul>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									</ul>
+								</div> <!-- /.title -->
+							</div> <!-- /.single-team-member -->
+						</div> <!-- /.col- -->
+					</div> <!-- /.row -->
+				</div> <!-- /.container -->
+			</div> <!-- /.our-team -->
 
-                                        <div class="swiper-slide">
-                                            <div class="block block--style-5">
-                                                <div class="block-image">
-                                                    <img src="<?= base_url('resources/');?>assets/images/clients/client-2.png">
-                                                </div>
-                                                <div class="block-mask-caption--over d-flex align-items-center">
-                                                    <div class="col text-center">
-                                                        <h4 class="heading heading-xs strong-400 text-uppercase c-gray-lighter">
-                                                            Graphic designer
-                                                        </h4>
-                                                        <h3 class="heading heading-4 strong-500 c-gray-lighter">
-                                                            Bertram Ozzie                                                        </h3>
-                                                        <ul class="social-media social-media--style-1-v1 social-media-circle mt-4">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-facebook"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-twitter"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-instagram"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-whatsapp"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+			
 
-                                        <div class="swiper-slide">
-                                            <div class="block block--style-5">
-                                                <div class="block-image">
-                                                    <img src="<?= base_url('resources/');?>assets/images/clients/client-2.png">
-                                                </div>
-                                                <div class="block-mask-caption--over d-flex align-items-center">
-                                                    <div class="col text-center">
-                                                        <h4 class="heading heading-xs strong-400 text-uppercase c-gray-lighter">
-                                                            Graphic designer
-                                                        </h4>
-                                                        <h3 class="heading heading-4 strong-500 c-gray-lighter">
-                                                            Destiny Erykah                                                        </h3>
-                                                        <ul class="social-media social-media--style-1-v1 social-media-circle mt-4">
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-facebook"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-twitter"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-instagram"></i>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="#">
-                                                                    <i class="ion ion-social-whatsapp"></i>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Add Pagination -->
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+			<!-- 
+			=============================================
+				What People Say
+			============================================== 
+			-->
+			<div class="what-people-say ch-p-bg-color">
+				<div class="container">
+					<h2>What People Say</h2>
 
-				<section class="pb-4">
-                        <div class="container">
-                            <div class="slice px-4 bg-base-1 rounded">
-                                <div class="px-4 sct-inner">
-                                    <div class="row justify-content-center cols-xs-space cols-sm-space cols-md-space">
-                                        <div class="col-lg-7">
-                                            <div class="text-center">
-                                                <h1 class="heading heading-inverse heading-2 text-normal strong-400 ">
-                                                    We don't like big words. We just deliver great designs and animations!
-                                                </h1>
-                                                <p class="mt-4 text-lg line-height-1_8">
-                                                    It doesn't matter if you know what you want or not. We will outsmart your imagination and concept. Then we would make every pixel come to life.
-                                                </p>
-                                                <a href="#" class="btn btn-styled btn-base-5 mt-4" data-toggle="modal" data-target="#story">
-                                                    Subscribe!
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+					<div id="client-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+						    <div class="item active">
+						      	<p>When the west realizes that it needs to contribute back to the development of the African continent from where they took slaves to build theirs, then they should do so through LERATO tokens.</p>
+								<div class="name">
+									<h5>Albert Hampton</h5>
+									<span>Designer</span>
+								</div>
+						    </div>	
+						    <div class="item">
+						      	<p>The fight for digital financial inclusion oin Africa is not won until true actors like #THELERATO change the narrative of what used to be. Nice Service!</p>
+								<div class="name">
+									<h5>Pete Damo</h5>
+									<span>Business owner</span>
+								</div>
+						    </div>	
+						    <div class="item">
+						      	<p>Foreign investment to Africa is gradually gaining grounds in all it's forms from all sectors of the economy. Digitial financial services need to be more accessible, reliable and efficient to serve the ever growing continent of Africa.</p>
+								<div class="name">
+									<h5>Ariana Hufman</h5>
+									<span>Investor</span>
+								</div>
+						    </div>	
+						</div> <!-- /.carousel-inner -->
+
+						  <!-- Indicators -->
+						<ol class="carousel-indicators">
+						    <li data-target="#client-carousel" data-slide-to="0" class="active tran3s"><img src="<?= base_url('resources/assets/') ?>images/home/11.jpg" alt="Image" class="round-border"></li>
+						    <li data-target="#client-carousel" data-slide-to="1" class="tran3s"><img src="<?= base_url('resources/assets/') ?>images/home/12.jpg" alt="Image" class="round-border"></li>
+						    <li data-target="#client-carousel" data-slide-to="2" class="tran3s"><img src="<?= base_url('resources/assets/') ?>images/home/13.jpg" alt="Image" class="round-border"></li>
+						</ol>		
+					</div><span id="exchange"></span> <!-- /#client-carousel -->					
+				</div> <!-- /.container -->
+			</div> <!-- /.what-people-say -->
+
+			<!-- 
+			=============================================
+				Partner Logo
+			============================================== 
+			-->
+	        <div class="partners-section">
+				<div class="container">
+					<div class="row">
+						<div id="partner-logo">
+							<div class="item"><b>USD 1.00 = 12.54 LRT</b></div>
+							<div class="item"><strong>ZAR 1.00 = 1.00 LRT</strong></div>
+							<div class="item"><strong>FCFA 150.00 = 1.00 LRT</strong> </div>
+							<div class="item"><strong>NGN 5.00 = 1.00 LRT </strong> </div>
+							<div class="item"><strong>GHC 1.00 = 5.40 LRT </strong></div>
+						</div> <!-- End .partner_logo -->
+					</div>
+				</div>
+			</div>
+

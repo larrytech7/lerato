@@ -14,17 +14,17 @@
 						<div class="col-md-2 col-sm-6 footer-list">
 							<h6>Information</h6>
 							<ul>
-								<li><a href="about-us.html" class="tran3s">About us</a></li>
-								<li><a href="account.html" class="tran3s">My Account</a></li>
-								<li><a href="faq.html" class="tran3s">Faq</a></li>
-								<li><a href="blog-v1.html" class="tran3s">Blog</a></li>
+								<li><a href="<?= site_url('auth/login')?>" class="tran3s">Login</a></li>
+								<li><a href="<?= site_url('about')?>" class="tran3s">About us</a></li>
+								<li><a href="<?= site_url('faq')?>" class="tran3s">Faq</a></li>
+								<li><a href="<?= site_url('contact')?>" class="tran3s">Contact</a></li>
 							</ul>
 						</div> <!-- /.footer-list -->
 						<div class="col-md-3 col-sm-6 footer-latest-news">
 							<h6>Latest News</h6>
 							<div class="single-news">
-								<h5><a href="blog-details.html" class="tran3s">How can be successfull in market place..</a></h5>
-								<span>13 Feb, 2016  /  Business</span>
+								<h5><a href="#" class="tran3s">How can be successfull in market place..</a></h5>
+								<span>13 Mar, 2018  /  Business</span>
 							</div> <!-- /.single-news -->
 						</div> <!-- /.footer-latest-news -->
 
@@ -45,8 +45,6 @@
 							<p class="float-left">Copyright &copy; 2018. All rights reserved <a href="https://thelerator.com" class="tran3s p-color" target="_blank">TheLerato</a></p>
 							<ul class="float-right">
 								<li><a href="#" class="tran3s round-border"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#" class="tran3s round-border"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								<li><a href="#" class="tran3s round-border"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 								<li><a href="#" class="tran3s round-border"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 								<li><a href="#" class="tran3s round-border"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 							</ul>

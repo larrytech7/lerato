@@ -43,7 +43,7 @@
 									<img src="<?= base_url('resources/assets/') ?>images/project/get.png" alt="Image">
 									<div class="opacity tran4s text-center">
 										<div class="text">
-											<h5>Receive Lerato</h5>
+											<h5>Buy Lerato</h5>
 											<a href="<?= site_url('receive') ?>" class="tran3s round-border fancybox"><i class="fab fa-get-pocket"></i></a>
 										</div>
 									</div>
@@ -59,7 +59,7 @@
 										</div>
 									</div>
 								</div> <!-- /.image -->
-							</div> <!-- /.single-project -->
+							</div> <!-- /.single-project --><span id="exchange"></span>
 						</div> <!-- /#mixitUp-item -->
 	        		</div> <!-- /.row -->
 				</div> <!-- /.container -->

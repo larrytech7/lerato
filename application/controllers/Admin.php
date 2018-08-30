@@ -62,7 +62,7 @@ class Admin extends CI_Controller {
 	public function transactions(){
 		$this->checkLogin();
 		//load transactions
-		$t = $this->transaction->get();
+		$t = $this->transaction->getUserTransactions($this->session->userdata('email'));
 		
 		$this->getPage('transactions', array('transactions' => $t->result_object()));
 	}
@@ -75,6 +75,16 @@ class Admin extends CI_Controller {
 		$this->getPage('send', array('transactions' => $t->result_object()));
 	}
 	
+	//allow one to buy lerato from bank account
+	public function receivelerato(){
+		$this->checkLogin();
+	
+		$u = $this->user->getUser($this->session->userdata('email'))->result_object();
+		$bank = $this->bank->getById($this->session->userdata('pin'))->result_object();
+		
+		$this->getPage('buy', array('user' => $u[0], 'bank' => $bank[0]));
+	}
+	
 	public function profile(){
 		$this->checkLogin();
 		//load transactions
@@ -85,50 +95,90 @@ class Admin extends CI_Controller {
 	}
 	
 	
-	//add new devotion 
-	public function adddevotion($id =0){
-        $this->form_validation->set_rules('name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('description', 'Description', 'trim|required');
+	//process send lerato 
+	public function send($id =0){
+        $this->form_validation->set_rules('email', 'Receiver Email', 'required|valid_email|min_length[1]');
+        $this->form_validation->set_rules('phone', 'Receiver Phone', 'required|min_length[7]');
+        $this->form_validation->set_rules('amount', 'Amount', 'trim|required');
 		
 		$this->form_validation->set_message('required', '{field} must not be empty');
 	
 		if($this->form_validation->run() == true){ //validation passed
-			$devotion = array();
-			$devotion['author'] = $this->input->post('name');
-			$devotion['description'] = $this->input->post('description');
-			//set devotion id
-			$devotion['id'] = $id == 0 ? time() : $id;
+			$transaction = array();
+			$transaction['receipient'] = $this->input->post('email');
+			$transaction['phone'] = $this->input->post('phone');
+			$transaction['amount'] = $this->input->post('amount');
+			$transaction['country'] = $this->input->post('country');
+			$transaction['reason'] = $this->input->post('reason', 'Plain Transfer');
+			$transaction['id'] = $id == 0 ? sha1(time()) : $id;
+			$transaction['sender'] = $this->session->userdata('email');
+			//get current user
+			$sender = $this->user->getUserById($this->session->userdata('pin'))->result_object();
+			$receiver = $this->user->getUser($transaction['receipient'])->result_object();
 			
-			$inserted = $this->devotions->insert($devotion);
-			$this->session->set_flashdata('info', '<div class="alert alert-info" role="alert">New devotion added/updated successfully</div>'.$this->upload->display_errors());
+			$lrt = $sender[0]->lerato - $transaction['amount'];
+			
+			if($lrt < 0){
+				$this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">Insufficient LRT to send. Please top up your account</div>');
+			}else{
+				//save transaction
+				$this->transaction->insert($transaction);
+				//update sender LRT balance and update receipient's LRT balance
+				$sender[0]->lerato = $lrt;
+				$receiver[0]->lerato = $receiver[0]->lerato + $transaction['amount'];
+				$updated = $this->user->updateWithTransaction($sender[0], $receiver[0]);
+				if($updated){
+					$transaction['status'] = 1;
+					$this->transaction->insert($transaction);
+					$this->session->set_userdata('lerato', $lrt);
+					$this->session->set_flashdata('info', '<div class="alert alert-info" role="alert">Lerato Sent successfully</div>');
+				}else{
+					log_message('Error occured during transaction.');
+					$this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">General Transaction error. Lerato was not transferred. Please try again</div>');
+				}
+			}
 		}else{
-			$this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">Error adding devotion. Try again'.validation_errors().'</div>');
+			$this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">Error Sending lerato. Verify that all information is entered correctly and try again'.validation_errors().'</div>');
 		}
 		
-		redirect('/devotions', 'location');
+		redirect('/send', 'location');
     }
 	
-	//add new video 
-	public function addvideo($id =0){
-        $this->form_validation->set_rules('title', 'Title', 'trim|required');
-        $this->form_validation->set_rules('link', 'Link', 'trim|required');
+	//process receive lerato 
+	public function receive(){
+        $this->form_validation->set_rules('amount', 'Purchase Amount', 'trim|required');
+        $this->form_validation->set_rules('bankswift', 'Bank Swift', 'trim|required');
 		
 		$this->form_validation->set_message('required', '{field} must not be empty');
 	
 		if($this->form_validation->run() == true){ //validation passed
-			$video = array();
-			$video['title'] = $this->input->post('title');
-			$video['link'] = $this->input->post('link');
-			//set devotion id
-			$video['id'] = $id == 0 ? time() : $id;
+			//bank info
+			$amount = $this->input->post('amount');
+			$bankinfo['bankname'] = $this->input->post('bankname');
+			$bankinfo['bankaccountname'] = $this->input->post('bankaccountname');
+			$bankinfo['bankpersonid'] = $this->input->post('bankpersonid');
+			$bankinfo['bankpersonaddress'] = $this->input->post('bankpersonaddress');
+			$bankinfo['bankcontact'] = $this->input->post('bankcontact');
+			$bankinfo['bankemail'] = $this->input->post('bankemail');
+			$bankinfo['bankaddress'] = $this->input->post('bankaddress');
+			$bankinfo['bankbranchcode'] = $this->input->post('bankbranchcode');
+			$bankinfo['bankcountry'] = $this->input->post('bankcountry');
+			$bankinfo['ebranchcode'] = $this->input->post('ebranchcode');
+			$bankinfo['opened'] = $this->input->post('moaccountdateopened').'/'.$this->input->post('yraccountdateopened');
+			$bankinfo['bankswift'] = $this->input->post('bankswift');
+			//$bankinfo['owner_id'] = $user['id'];
+			//TODO: Normally, query the bank API to confirm LRT purchase befre logging the transaction
 			
-			$inserted = $this->videos->insert($video);
-			$this->session->set_flashdata('info', '<div class="alert alert-info" role="alert">New video added/updated successfully</div>'.$this->upload->display_errors());
+			//simulate purchase
+			$user = $this->user->getUserById($this->session->userdata('pin'))->result_object();
+			$user[0]->lerato = $user[0]->lerato + $amount;
+			$inserted = $this->user->updateUser($user[0], $user[0]->id);
+			$this->session->set_flashdata('info', '<div class="alert alert-success" role="alert">LRT Purchased</div>');
 		}else{
-			$this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">Error adding video. Try again'.validation_errors().'</div>');
+			$this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">Error Purchasing LRT. Ensrure your bank Details are OK'.validation_errors().'</div>');
 		}
 		
-		redirect('/videos', 'location');
+		redirect('/receive', 'location');
     }
 	
 	
@@ -147,7 +197,7 @@ class Admin extends CI_Controller {
 			redirect('/admin', 'location');
 		
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[1]');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[1]');
+       // $this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[1]');
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
         
         if ($this->form_validation->run() === FALSE){
@@ -199,7 +249,8 @@ class Admin extends CI_Controller {
             }
         }
 	}
-    //login
+    
+	//login
     public function login(){
 		//redirect to dashboard if already logged-in
 		if($this->session->userdata('loggedin') == 1)

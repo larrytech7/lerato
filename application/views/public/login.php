@@ -23,7 +23,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="email" name="email" class="form-control form-control-lg" placeholder="Email" value="<?= set_value('email');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-user-circle-o"></i>
+																			<i class="fa fa-user-circle-o text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -37,7 +37,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="password" name="password" class="form-control form-control-lg" placeholder="Password">
 																		<span class="input-group-addon">
-																			<i class="fa fa-lock"></i>
+																			<i class="fa fa-lock text-primary"></i>
 																		</span>
 																	</div>
 																</div>

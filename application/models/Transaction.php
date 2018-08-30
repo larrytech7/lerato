@@ -11,29 +11,28 @@ class Transaction extends CI_Model{
         date_default_timezone_set('Africa/Douala');
     }    
     
-    //create/update pill in DB
-    public function insert($event){
-        $event['created_at'] = time();
-        $event['updated_at'] = time();
-        $event['current_date_string'] = date('l jS \of F Y h:i:s A');
-        $this->db
-            ->replace($this->table, $event);
-        return $this->db->insert_id();
+    //create/update transaction in DB
+    public function insert($trans){
+        $trans['created_at'] = time();
+        $trans['updated_at'] = time();
+        $trans['current_date_string'] = date('l jS \of F Y h:i:s A');
+        return $this->db
+            ->replace($this->table, $trans);
     }
     
-    //update/edit event
-    public function update($event, $id){
+    //update/edit
+    public function update($t, $id){
         
-        $event['updated_at'] = date('Y-m-d H:i:s', time());
-		$event['current_date_string'] = date('l jS \of F Y h:i:s A');
+        $t['updated_at'] = date('Y-m-d H:i:s', time());
+		$t['current_date_string'] = date('l jS \of F Y h:i:s A');
 		
         return $this->db
-                ->set($event)
+                ->set($t)
                 ->where('id', $id)
                 ->update($this->table);
     }
     
-    //delete event
+    //delete
     public function delete($Id){
 		$update = array('deleted_at' => time());
 		
@@ -43,7 +42,7 @@ class Transaction extends CI_Model{
             ->update($this->table);
     }
     
-    //list all events created
+    //list all 
     public function get(){
         return $this->db
             ->from($this->table)
@@ -52,13 +51,12 @@ class Transaction extends CI_Model{
             ->get();
     }
 	
-	//get a particular event
-	public function getById($id){
-		$event = $this->db->where('id', $id)
+	//get a particular 
+	public function getUserTransactions($email){
+		$t = $this->db->where('sender', $email)
 						->where('deleted_at', NULL)
-						->limit(1)
 						->get($this->table);
-		return $event;
+		return $t;
 	}
     
 }

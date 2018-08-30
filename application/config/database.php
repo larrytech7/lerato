@@ -76,11 +76,11 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',//
-	'username' => 'dev', //
-	'password' => 'creationfox7', //
+	'username' => 'dev', //greenclt_leratow
+	'password' => 'creationfox7', //yW2+]TGEYyf=
 	'database' => 'lerato_db', //
 	'dbdriver' => 'mysqli',
-	'dbprefix' => '', //mydigisc_
+	'dbprefix' => '', //greenclt_
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,

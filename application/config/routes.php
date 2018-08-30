@@ -64,6 +64,8 @@ $route['transactions'] = 'admin/transactions';
 $route['profile'] = 'admin/profile';
 $route['send'] = 'admin/sendlerato';
 $route['receive'] = 'admin/receivelerato';
+$route['transaction/send'] = 'admin/send';
+$route['transaction/receive'] = 'admin/receive';
 $route['users'] = 'admin/users';
 $route['users/remove/([a-zA-Z0-9]+)'] = 'admin/removeuser/$1';
 

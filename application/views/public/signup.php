@@ -15,6 +15,7 @@
 													<?= form_open('admin/signup', array('class'=>'col-lg-12 form-default', 'role'=>'form')); ?>
 														<div class="row">
 															<h3>Create Account</h3>
+															<hr style="border: 1px solid #000000"/>
 															<h4>Personal information</h4>
 															<div class="col-md-6">
 																<div class="form-group">
@@ -22,7 +23,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" name="fname" class="form-control form-control-lg" placeholder="First name" value="<?= set_value('fname');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-user-circle-o"></i>
+																			<i class="fa fa-user-circle-o text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -33,7 +34,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" name="lname" class="form-control form-control-lg" placeholder="Last name" value="<?= set_value('lname');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-user-circle-o"></i>
+																			<i class="fa fa-user-circle-o text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -46,7 +47,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="email" name="email" class="form-control form-control-lg" placeholder="Email" value="<?= set_value('email');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-at"></i>
+																			<i class="fa fa-at text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -57,7 +58,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="phone" name="phone" class="form-control form-control-lg" placeholder="Phone (international format)" value="<?= set_value('phone');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-phone"></i>
+																			<i class="fa fa-phone text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -70,7 +71,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="password" name="password" class="form-control form-control-lg" placeholder="Password" value="<?= set_value('password');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-lock"></i>
+																			<i class="fa fa-lock text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -81,7 +82,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="password" name="re-password" class="form-control form-control-lg" placeholder="Confirm your password" value="<?= set_value('password');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-lock"></i>
+																			<i class="fa fa-lock text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -94,7 +95,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" name="identification" class="form-control form-control-lg" placeholder="ID/Passport" value="<?= set_value('identification');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-hashtag"></i>
+																			<i class="fa fa-hashtag text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -105,7 +106,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" name="home_address" class="form-control form-control-lg" placeholder="Home address" value="<?= set_value('home_address');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-home"></i>
+																			<i class="fa fa-home text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -118,7 +119,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" name="itax" class="form-control form-control-lg" placeholder="Your income Tax number" value="<?= set_value('itax');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-hashtag"></i>
+																			<i class="fa fa-hashtag text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -129,7 +130,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" name="btax" class="form-control form-control-lg" placeholder="Business Tax Number" value="<?= set_value('btax');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-hashtag"></i>
+																			<i class="fa fa-hashtag text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -146,7 +147,7 @@
 																			<option value="Nigeria">Nigeria</option>
 																		</select>
 																		<span class="input-group-addon">
-																			<i class="fa fa-globe"></i>
+																			<i class="fa fa-globe text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -161,7 +162,7 @@
 																			<option value="Nigeria">Nigeria</option>
 																		</select>
 																		<span class="input-group-addon">
-																			<i class="fa fa-building"></i>
+																			<i class="fa fa-building text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -178,7 +179,7 @@
 																			<option value="Nigeria">Nigeria</option>
 																		</select>
 																		<span class="input-group-addon">
-																			<i class="fa fa-building"></i>
+																			<i class="fa fa-building text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -189,13 +190,14 @@
 																	<div class="input-group input-group--style-1">
 																	<input type="number" min="0" name="zip" class="form-control" placeholder="Zip/Postal Code" value="<?= set_value('zip');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-building"></i>
+																			<i class="fa fa-building text-primary"></i>
 																		</span>
 																	</div>
 																</div>
 															</div>
 														</div>
 														<h4>Bank (Personal or Business) Account Information</h4>
+														<hr style="border: 1px solid #000000"/>
 														<div class="row">
 															<div class="col-md-6">
 																<div class="form-group">
@@ -203,7 +205,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" min="0" name="bankname" class="form-control form-control-lg" placeholder="Name of bank" value="<?= set_value('bankname');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-university"></i>
+																			<i class="fa fa-university text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -214,7 +216,7 @@
 																	<div class="input-group input-group--style-1">
 																	<input type="text" name="bankaccountname" class="form-control form-control-lg" placeholder="Account Holder Name (As on official documents)" value="<?= set_value('bankaccountname');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-user"></i>
+																			<i class="fa fa-user text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -227,7 +229,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" name="bankpersonid" class="form-control form-control-lg" placeholder="Name of bank" value="<?= set_value('bankpersonid');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-hashtag"></i>
+																			<i class="fa fa-hashtag text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -238,7 +240,7 @@
 																	<div class="input-group input-group--style-1">
 																	<input type="text" name="bankpersonaddress" class="form-control form-control-lg" placeholder="Account Holder Address" value="<?= set_value('bankpersonaddress');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-home"></i>
+																			<i class="fa fa-home text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -251,7 +253,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="phone" name="bankcontact" class="form-control form-control-lg" placeholder="Phone number" value="<?= set_value('bankcontact');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-phone"></i>
+																			<i class="fa fa-phone text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -262,7 +264,7 @@
 																	<div class="input-group input-group--style-1">
 																	<input type="email" name="bankemail" class="form-control form-control-lg" placeholder="Email" value="<?= set_value('bankemail');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-at"></i>
+																			<i class="fa fa-at text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -275,7 +277,7 @@
 																	<div class="input-group input-group--style-1">
 																		<input type="text" name="bankaddress" class="form-control form-control-lg" placeholder="Bank address" value="<?= set_value('bankaddress');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-map-marker"></i>
+																			<i class="fa fa-map-marker text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -286,7 +288,7 @@
 																	<div class="input-group input-group--style-1">
 																	<input type="text" name="bankbranchcode" class="form-control form-control-lg" placeholder="Bank branch code" value="<?= set_value('bankbranchcode');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-hashtag"></i>
+																			<i class="fa fa-hashtag text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -303,7 +305,7 @@
 																			<option value="Nigeria">Nigeria</option>
 																		</select>
 																		<span class="input-group-addon">
-																			<i class="fa fa-flag"></i>
+																			<i class="fa fa-flag text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -314,7 +316,7 @@
 																	<div class="input-group input-group--style-1">
 																	<input type="number" min="0" name="ebranchcode" class="form-control form-control-lg" placeholder="Branch code for electronic payments" value="<?= set_value('ebranchcode');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-hashtag"></i>
+																			<i class="fa fa-hashtag text-primary"></i>
 																		</span>
 																	</div>
 																</div>
@@ -362,7 +364,7 @@
 																	<div class="input-group input-group--style-1">
 																	<input type="text" min="0" name="bankswift" class="form-control form-control-lg" placeholder="Bank swift code" value="<?= set_value('bankswift');?>">
 																		<span class="input-group-addon">
-																			<i class="fa fa-qrcode"></i>
+																			<i class="fa fa-qrcode text-primary"></i>
 																		</span>
 																	</div>
 																</div>

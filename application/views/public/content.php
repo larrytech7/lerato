@@ -69,7 +69,7 @@
 									data-splitin="none" 
 									data-splitout="none" 
 									data-responsive_offset="on">
-									<a href="#" class="volunteer-button tran3s">Send LERATO</a>
+									<a href="<?= site_url('send')?>" class="volunteer-button tran3s">Send LERATO</a>
 								</div>
 									
 								<!-- LAYER NR. 4 -->
@@ -84,7 +84,7 @@
 									data-splitin="none" 
 									data-splitout="none" 
 									data-responsive_offset="on">
-									<a href="donate.html" class="donate-button tran3s">Receive LERATO</a>
+									<a href="<?= site_url('receive')?>" class="donate-button tran3s">Buy LERATO</a>
 								</div>
 								
 							</li>
@@ -553,7 +553,7 @@
 					<div class="container">
 						<h2>Make a Transaction</h2>
 						<p>Contribute to the development and promotion of <b>THELERATO</b> by making a transaction today. </p>
-						<a href="#!" class="button-four ch-p-bg-color">Make a Transaction</a>
+						<a href="<?= site_url('send') ?>" class="button-four ch-p-bg-color">Make a Transaction</a>
 						<span id="exchange"></span>
 					</div>
 				</div> <!-- /.opacity -->
@@ -590,6 +590,6 @@
 			<div class="bottom-footer-banner ch-p-bg-color">
 				<div class="container">
 					<h3 class="float-left">Interested in investing today?</h3>
-					<a href="contact.html" class="float-right button-five">Contact Now!!</a>
+					<a href="<?= site_url('send') ?>" class="float-right button-five">Contact Now!!</a>
 				</div>
 			</div>
